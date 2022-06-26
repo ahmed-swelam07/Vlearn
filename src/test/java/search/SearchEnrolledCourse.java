@@ -29,7 +29,7 @@ public class SearchEnrolledCourse {
 	  driver.findElement(LoginBtn).click();
 	  By UserName = By.xpath("//input[@id='username']");
 	  By Password = By.xpath("//input[@id='password']");
-//	  By CourseName = By.linkText("صناعة الأفلام");
+	  By CourseName = By.linkText("أساسيات سلاسل الكُتل (BlockChain) في إدارة الأعمال");
 	  By ViewCoursBtn = By.linkText("view Course");
 
 	  new WebDriverWait(driver,Duration.ofSeconds(5))
@@ -38,9 +38,6 @@ public class SearchEnrolledCourse {
 	  driver.findElement(Password).sendKeys("12345678",Keys.ENTER);
 	  driver.navigate().to("https://vol.vdev.variiance.com/AllCourses/1");
 	  
-	  WebElement CourseName1 = driver.findElement(By.linkText("صناعة الأفلام"));
-	  ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", CourseName1);
-	  Thread.sleep(500);
 	  
 	  new WebDriverWait(driver,Duration.ofSeconds(5))
 	  .until(ExpectedConditions.elementToBeClickable(CourseName1));
